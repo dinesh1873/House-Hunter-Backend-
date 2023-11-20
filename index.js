@@ -1,8 +1,8 @@
-
 const express=require("express");
 const mongoose=require("mongoose");
 const SellerRoute=require("./controller/SellerRouter");
 const BuyerRoute=require("./controller/BuyerRouter");
+const Mail=require("./controller/Mail");
 const bodyParser=require("body-parser");
 const cors = require('cors');
 const app=express();
@@ -28,4 +28,4 @@ app.listen(4000,()=>{
 })
 
 app.use("/BuyerRoute",BuyerRoute);
-
+app.use("/Mail",Mail)
